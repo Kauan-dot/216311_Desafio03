@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 03</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Board de tarefas</h1>
+        <section id="form-tasks-section">
+            <form id="form-tasks">
+                <input 
+                    type="text" 
+                    id="name-task" 
+                    name="task" 
+                    class="input-tasks"
+                    aria-label="Nome da tarefa"
+                    placeholder="Nome da tarefa"
+                    required
+                />
+                <input 
+                    type="text"
+                    id="tag-task"
+                    name="tag"
+                    class="input-tasks"
+                    aria-label="Etiqueta"
+                    placeholder="Etiqueta"
+                    required
+                />
+                <button 
+                    type="submit" 
+                    id="save-task" 
+                    aria-label="Cadastrar tarefa" 
+                    class="add-task-btn"
+                >+</button>
+            </form>
+        </section>
+        <section class="tasks-list-section">
+            <ul id="task-list"></ul>
+        </section>
+        <footer id="board-footer">
+        </footer>
+    </main>
+</body>
+</html>

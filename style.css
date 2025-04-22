@@ -1,0 +1,225 @@
+html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: #F5F9FF;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0 0 2.4rem 0;
+    color: #11175E;
+    font-family: "Rubik", sans-serif;
+}
+
+main{
+    width: 100%;
+    max-width: 60rem;
+    background-color: #fff;
+    border: #EEEEEE solid 2px;
+    border-radius: 1.6rem;
+    padding: 3.2rem 2.4rem;
+}
+
+.tasks-list-section {
+    margin: 0.8rem 0 1.6rem;
+    font-family: "Inter", sans-serif;
+
+    & > ul {
+        padding-inline-start: 0rem;
+        height: 45rem;
+        overflow: auto;
+    }
+    & > ul > li {
+        list-style-type: none;    
+        padding:  2.4rem 3.2rem;
+        background-color: #fff;
+        border: #EEEEEE solid 1px;
+        border-radius: 1.6rem;
+        margin-bottom: .8rem;
+        font-weight: 500;
+    }
+    & > ul > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.task-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-name{
+    font-size: 1.6rem;
+    color: #001747;
+
+    &.checked {
+        text-decoration: line-through;
+        color: #8F98A8;
+    }
+}
+
+.task-tag {
+    border: #B1BACB solid 1px;
+    border-radius: 1.6rem;
+    padding: .4rem .8rem;
+    font-size: 1.2rem;
+}
+
+.task-date {
+    font-size: 1.4rem;
+}
+
+.task-info-line {
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    color: #B1BACB;
+}
+
+.task-checkbox {
+    background-color: #2D70FD;
+    color: #fff;
+    border: none;
+    border-radius: .4rem;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #1A4BB8;
+    }
+
+    &.checked {
+        background-color: #00D8A7;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        & > i {
+            opacity: 0;
+            transform: scale(0.5);
+            animation: fadeInCheck 0.3s forwards;
+        }
+    }
+}
+
+@keyframes fadeInCheck {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#form-tasks-section {
+    width: 100%;
+}
+
+#form-tasks {
+    font-size: 1.6rem;
+    display: flex;
+    gap: 1.6rem;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.input-tasks {
+    width: 100%;
+    height: 5rem;
+    font-size: 1.6rem;
+    border-radius: .8rem;
+    border: #EEEEEE solid 1px;
+    padding-left: 2.4rem;
+
+    &::placeholder {
+        font-family: "Rubik", sans-serif;
+        color: #B7B7B7;
+    }
+}
+
+.add-task-btn {
+    box-sizing: border-box;
+    height: 4.5rem;
+    width: 15%;
+    color: #fff;
+    background: #2D70FD;
+    border: none;
+    border-radius: .4rem;
+    font-size: 2.4rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #1A4BB8;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end; /* Alinha conteúdo à direita */
+    padding: 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #B1BACB;
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        align-items:flex-start;
+    }
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    main {
+        width: 85%;
+        height: 100%;
+        padding: 2.4rem 1.6rem;
+    }
+
+    #form-tasks {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .add-task-btn {
+        width: 100%;;
+    }
+    
+    .input-tasks {
+        padding: 1.6rem;
+        box-sizing: border-box;
+    }
+
+    .task-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    .task-info-line {
+        align-items: baseline;
+        display: flex;
+        flex-direction: column;
+    }
+}
